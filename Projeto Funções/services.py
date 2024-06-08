@@ -1,13 +1,14 @@
 import json
 import tarefas_model
 
-def list():
-    return
+repositorio_tarefas = []
+
+def list_():
+    return repositorio_tarefas
 
 def create(nome : str, descricao : str, prioridade : str, categoria : str, status : str):
-    nova_Tarefa = tarefas_model.Tarefa(nome, descricao, prioridade, categoria, status)
-    salvar(nova_Tarefa)
-
+    nova_tarefa = tarefas_model.Tarefa(nome, descricao, prioridade, categoria, status)   
+    repositorio_tarefas.append(nova_tarefa)
 def update():
     salvar()
 
@@ -17,4 +18,4 @@ def remove():
 
 def salvar(tarefas):
     with open('repositorio_tarefas.json','w') as file:
-        file.write(json.dump(tarefas, indent=4))
+        file.write(json.dumps(tarefas, indent=4))

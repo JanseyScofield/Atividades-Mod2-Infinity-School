@@ -1,7 +1,7 @@
 import controllers
 
 def get():
-    return
+    controllers.list()
 
 def post():
     controllers.create()

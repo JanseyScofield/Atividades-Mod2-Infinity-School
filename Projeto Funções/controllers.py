@@ -1,7 +1,10 @@
 import services
 
 def list():
-    return
+    lista_de_tarefas = services.list_()
+    print("     Tarefas        ")
+    for tarefa in lista_de_tarefas:
+        tarefa.get()
 
 def create():
     while True:
