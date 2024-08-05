@@ -16,7 +16,7 @@ class Biblioteca:
     def remover_livro(self, titulo):
        try:
         ndx_livro = self.__lista_livros.index(titulo)
-        self.__lista_livros.remove(ndx_livro)
+        self.__lista_livros.pop(ndx_livro)
        except:
            print(f"Não foi possível remover {titulo}. Verifique o nome digitado.")
        else:
