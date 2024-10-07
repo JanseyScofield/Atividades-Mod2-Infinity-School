@@ -13,5 +13,11 @@ for iCont in range(0, 5):
             break
     dicionario_produtos[produto] = preco
 
+valor_total_compra = 0
+print("Itens comprados:")
 for produto, valor in dicionario_produtos.items():
     print(f"{produto} : R$ {valor:.2f}")
+    valor_total_compra  += valor
+
+print(f"O valor total da compra foi R$ {valor_total_compra:.2f}.")
+    
